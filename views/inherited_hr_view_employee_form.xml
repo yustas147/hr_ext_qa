@@ -9,7 +9,7 @@
                 <xpath expr="//field[@name='address_home_id']" position="after">
                     <field name='mobile'/>
                     <field name='private_email' widget='email'/>
-                    <field name='corporate_email' widget='email'/>
+                    <field name='corporate_email'/>
                     <field name='city'/>
                     <field name='education'/>
                     <field name='passport_data'/>
