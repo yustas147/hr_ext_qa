@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_hr_view_employee_form">
+            <field name="name">hr.ext.qa.inherits.hr.view.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='address_home_id']" position="after">
+                    <field name='mobile'/>
+                    <field name='private_email' widget='email'/>
+                    <field name='corporate_email' widget='email'/>
+                    <field name='city'/>
+                    <field name='education'/>
+                    <field name='passport_data'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
