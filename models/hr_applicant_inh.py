@@ -10,6 +10,9 @@ class hr_applicant(models.Model):
     _inherit = 'hr.applicant'    
     
     candidate_level = fields.Selection(string="Candidate Level", selection=[('normal','Normal'),('high','High'),('very_high','Very High')])
+    candidate_type = fields.Selection(string="Candidate Type", selection=[('normal','Normal'),('high','High'),('very_high','Very High')])
+    current_salary = fields.Float(string="Current Salary")
+    availability_date = fields.Date(string="Available From")
     
     #name = fields.Char('Name')
     #percentage = fields.Integer(string='Grade of owning')
