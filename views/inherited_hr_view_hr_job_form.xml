@@ -14,6 +14,9 @@
                     <!--<field name='priority'/>-->
                 <!--</xpath>-->
                 <xpath expr="//field[@name='department_id']" position="after">
+                    <field name='start_date' class="oe_inline"/>
+                    <field name='time_to_expire' class="oe_inline"/>
+                    <field name='priority' class="oe_inline"/>
                     <field name='step_technologies' class="oe_inline"/>
                     <field name='requirement' class="oe_inline"/>
                     <field name='duties' class="oe_inline"/>
