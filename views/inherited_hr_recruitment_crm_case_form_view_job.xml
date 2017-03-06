@@ -7,6 +7,7 @@
             <field name="inherit_id" ref="hr_recruitment.crm_case_form_view_job"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='type_id']" position="after">
+                    <field name='skype'/>
                     <field name='candidate_level'/>
                     <field name='candidate_type'/>
                     <field name='current_salary' widget="monetary"/>
