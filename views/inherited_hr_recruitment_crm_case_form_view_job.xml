@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="hr_recruitment.crm_case_form_view_job"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='type_id']" position="after">
-                    <field name='skype'/>
+    <!--                <field name='skype'/> -->
                     <field name='candidate_level'/>
                     <field name='candidate_type'/>
                     <field name='current_salary' widget="monetary"/>
@@ -18,19 +18,5 @@
                 </xpath>
             </field>
         </record>
-        <!--<record id="hr_skills_extended_inherits_view_employee_skill_form" model="ir.ui.view">-->
-        <!--<field name="name">hr.skills.extended.inherits.view.empoloyee.skill.form</field>-->
-        <!--<field name="model">hr.employee</field>-->
-        <!--<field name="inherit_id" ref="hr_skill.view_employee_skill_form"/>-->
-        <!--<field name="arch" type="xml">-->
-            <!--<field name="skill_ids" position="after">-->
-                <!--<field name='hr_employee_skill_data_ids'/>-->
-            <!--</field>-->
-            <!--<field name="skill_ids" position="attributes">-->
-                <!--<attribute name='readonly'>True</attribute>-->
-            <!--</field>-->
-        <!--</field>-->
-    <!--</record>-->
-
     </data>
 </openerp>

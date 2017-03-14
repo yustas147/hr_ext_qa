@@ -14,6 +14,6 @@ class hr_applicant(models.Model):
     current_salary = fields.Float(string="Current Salary")
     availability_date = fields.Date(string="Available From")
     #skype = fields.Char(string="Skype")
-    skype = fields.Char(string="Skype", related='partner_id.skype')
+    #skype = fields.Char(string="Skype", related='partner_id.skype')
     
     
