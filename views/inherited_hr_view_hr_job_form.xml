@@ -6,25 +6,28 @@
             <field name="model">hr.job</field>
             <field name="inherit_id" ref="hr.view_hr_job_form"/>
             <field name="arch" type="xml">
-                <!--<xpath expr="//field[@name='user_id']" position="after">-->
-                    <!--<field name='start_date'/>-->
-                    <!--<field name='time_to_expire'/>-->
-                <!--</xpath>-->
-                <!--<xpath expr="//field[@name='alias_name']" position="after">-->
-                    <!--<field name='priority'/>-->
-                <!--</xpath>-->
-                <xpath expr="//field[@name='department_id']" position="after">
-                    <field name='start_date' class="oe_inline"/>
-                    <field name='time_to_expire' class="oe_inline"/>
-                    <field name='priority' class="oe_inline"/>
-                    <field name='step_technologies' class="oe_inline"/>
-                    <field name='requirement' class="oe_inline"/>
-                    <field name='duties' class="oe_inline"/>
-                    <field name='phase_proj_prod' class="oe_inline"/>
-                    <field name='team_size' class="oe_inline"/>
-                    <field name='remote_allowed' class="oe_inline"/>
-                    <field name='application_ids' class="oe_inline"/>
-                </xpath>
+  <xpath expr="//field[@name='department_id']" position="before">
+	         <group col='6' colspan='2'>
+                   <field name="start_date"/>
+                    <field name="time_to_expire"/>
+                    <field name="priority"/>
+                    <field name="phase_proj_prod"/>
+                    <field name="team_size"/>
+                    <field name="remote_allowed"/>
+                    <newline/>
+                 </group>
+                 <group col='4' colspan='2'>
+                     <field name="step_technologies"/>
+                     <field name="duties"/>
+                     <field name="requirement"/>
+                     <field name="application_ids" colspan='2'>
+                            <tree>
+                                 <field name='partner_id'/>
+                            </tree>
+                      </field>
+                 </group>
+                    <newline/>
+	        </xpath>
             </field>
         </record>
     </data>
