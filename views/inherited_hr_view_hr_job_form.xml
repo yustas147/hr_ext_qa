@@ -20,11 +20,11 @@
                      <field name="step_technologies"/>
                      <field name="duties"/>
                      <field name="requirement"/>
-                     <field name="application_ids" colspan='2'>
-                            <tree>
-                                 <field name='partner_id'/>
-                            </tree>
-                      </field>
+                     <!--<field name="application_ids" colspan='2'>-->
+                            <!--<tree>-->
+                                 <!--<field name='partner_id'/>-->
+                            <!--</tree>-->
+                      <!--</field>-->
                  </group>
                     <newline/>
 	        </xpath>

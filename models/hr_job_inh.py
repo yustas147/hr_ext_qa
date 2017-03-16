@@ -16,4 +16,4 @@ class hr_job(models.Model):
     team_size = fields.Integer(string="Team size")
     remote_allowed = fields.Selection(string="Remote Allowed?", selection=[('allowed','Allowed'),('disallowed','Disallowed'),('partially_allowed','Partiallly Allowed')])    
     project_description = fields.Text(string="Project Description")    
-    application_ids = fields.Many2many(string="Applications", comodel_name="hr.applicant", relation="hr_job_applicant")
+    #application_ids = fields.Many2many(string="Applications", comodel_name="hr.applicant", relation="hr_job_applicant")
