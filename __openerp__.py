@@ -29,6 +29,7 @@
         'views/inherited_hr_view_hr_job_form.xml',
         'views/inherited_hr_recruitment_crm_case_form_view_job.xml',
         'views/inherited_hr_view_employee_form.xml',
+        'data/hr.candidate.type.csv',
     ],
     # only loaded in demonstration mode
     'demo': [
