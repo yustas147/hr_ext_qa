@@ -16,10 +16,10 @@
                     <field name="remote_allowed"/>
                     <newline/>
                  </group>
-                 <group col='4' colspan='2'>
-                     <field name="step_technologies"/>
-                     <field name="duties"/>
-                     <field name="requirement"/>
+                 <group col='6' colspan='2'>
+                     <field name="step_technologies" nolabel="1" placeholder="Step Technologies"/>
+                     <field name="duties" nolabel="1" placeholder="Duties"/>
+                     <field name="requirement" nolabel="1" placeholder="Requirement"/>
                      <!--<field name="application_ids" colspan='2'>-->
                             <!--<tree>-->
                                  <!--<field name='partner_id'/>-->
