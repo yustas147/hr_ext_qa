@@ -12,6 +12,7 @@
                 <xpath expr="//div[@t-if='record.mobile.raw_value']" position="after">
                     <!--<div t-if="record.skype.raw_value">Skype: <field name="skype"/></div>-->
                     <div t-if="record.skype.raw_value">Skype: <a t-attf-href="skype:#{record.skype.raw_value}"><field name="skype"/></a></div>
+                    <div t-if="record.slack.raw_value">Slack: <a t-attf-href="slack:#{record.slack.raw_value}"><field name="slack"/></a></div>
                 </xpath>
             </field>
         </record>

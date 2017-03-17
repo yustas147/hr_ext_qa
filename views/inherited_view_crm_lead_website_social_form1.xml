@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_view_crm_lead_website_social_form1">
+           <field name="name">hr.ext.qa.inherits.view.crm.lead.website.social.form1</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="crm_lead_website_social.view_crm_lead_website_social_form1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='skype']" position="after">
+                    <field name='slack'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

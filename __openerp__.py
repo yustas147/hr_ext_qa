@@ -31,6 +31,7 @@
         'views/inherited_hr_view_employee_form.xml',
         'views/inherited_base_view_partner_form.xml',
         'views/inherited_base_res_partner_kanban_view.xml',
+        'views/inherited_view_crm_lead_website_social_form1.xml',
         'data/hr.candidate.type.csv',
     ],
     # only loaded in demonstration mode

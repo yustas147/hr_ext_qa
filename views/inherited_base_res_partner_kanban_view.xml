@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[@class='oe_kanban_details']/ul/li[@t-if='record.email.raw_value']" position="after">
                     <li t-if="record.skype.raw_value"><a t-attf-href="skype:#{record.skype.raw_value}"><field name="skype"/></a></li>
+                    <li t-if="record.slack.raw_value"><a t-attf-href="skype:#{record.slack.raw_value}"><field name="slack"/></a></li>
                 </xpath>
             </field>
         </record>
