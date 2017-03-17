@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_base_view_partner_form">
+            <field name="name">hr.ext.qa.inherits.base.view.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[@string='Contact']/sheet/group/field[@name='email']" position="after">
+                                 <field name="skype"/>
+                </xpath>
+                <xpath expr="//div[@t-if='record.mobile.raw_value']" position="after">
+                    <!--<div t-if="record.skype.raw_value">Skype: <field name="skype"/></div>-->
+                    <div t-if="record.skype.raw_value">Skype: <a t-attf-href="skype:#{record.skype.raw_value}"><field name="skype"/></a></div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

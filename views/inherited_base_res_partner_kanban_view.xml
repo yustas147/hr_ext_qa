@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_base_res_partner_kanban_view">
+           <field name="name">hr.ext.qa.inherits.base.res.partner.kanban.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_kanban_details']/ul/li[@t-if='record.email.raw_value']" position="after">
+                    <li t-if="record.skype.raw_value"><a t-attf-href="skype:#{record.skype.raw_value}"><field name="skype"/></a></li>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

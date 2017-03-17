@@ -20,7 +20,7 @@
     'version': '0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr_recruitment'],
+    'depends': ['base','hr_recruitment','crm_lead_website_social'],
 
     # always loaded
     'data': [
@@ -29,6 +29,8 @@
         'views/inherited_hr_view_hr_job_form.xml',
         'views/inherited_hr_recruitment_crm_case_form_view_job.xml',
         'views/inherited_hr_view_employee_form.xml',
+        'views/inherited_base_view_partner_form.xml',
+        'views/inherited_base_res_partner_kanban_view.xml',
         'data/hr.candidate.type.csv',
     ],
     # only loaded in demonstration mode
