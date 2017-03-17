@@ -6,18 +6,43 @@
             <field name="model">hr.applicant</field>
             <field name="inherit_id" ref="hr_recruitment.crm_case_form_view_job"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='type_id']" position="before">
+                <field name='type_id' position='replace'/>
+                <field name='partner_mobile' position='attributes'>
+                    <attribute name='string'>Cell Phone</attribute>
+                </field>
+                <field name='partner_phone' position='attributes'>
+                    <attribute name='string'>Home Phone</attribute>
+                </field>
+                <xpath expr="//field[@name='partner_mobile']" position="after">
                     <field name='skype'/> 
                     <field name='slack'/> 
+                    <field name='website'/> 
+                    <field name='linkedin'/> 
+                    <!--<field name='current_salary' widget="monetary"/>-->
                 </xpath>
-                <xpath expr="//field[@name='type_id']" position="after">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name='type_id'/>
                     <field name='candidate_level'/>
                     <field name='candidate_type'/>
-                    <field name='current_salary' widget="monetary"/>
                     <field name='availability_date' widget="date"/>
                 </xpath>
                 <xpath expr="//field[@name='categ_ids']" position="attributes">
                     <attribute name="string">Key Skills</attribute>
+                </xpath>
+                <xpath expr="//label[@for='salary_expected']" position="before">
+                <!--<xpath expr="//field[@name='emp_id']" position="after">-->
+                       <label for="current_salary"/> 
+                        <div>
+                            <field name="current_salary" class="oe_inline"/>
+                            <span class="oe_inline" attrs="{'invisible':[('current_salary_extra','=',False)]}"> + </span>
+                            <field name="current_salary_extra" class="oe_inline" placeholder="Extra advantages..."/>
+                        </div>
+                </xpath>
+                <xpath expr="//sheet/group/group[1]" position="attributes">
+                    <attribute name="string">Contact Info</attribute>
+                </xpath>
+                <xpath expr="//sheet/group/group[2]" position="attributes">
+                    <attribute name="string">Operational Info</attribute>
                 </xpath>
             </field>
         </record>
