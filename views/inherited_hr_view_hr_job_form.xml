@@ -6,7 +6,14 @@
             <field name="model">hr.job</field>
             <field name="inherit_id" ref="hr.view_hr_job_form"/>
             <field name="arch" type="xml">
-  <xpath expr="//field[@name='department_id']" position="before">
+	        <field name="description" position="replace"/>
+	        <field name="requirements" position="replace"/>
+	        <label for="description" position="replace"/>
+	        <label for="requirements" position="replace"/>
+		<!--<xpath expr="//sheet/div[3]" position="replace"/>-->
+		<!--<xpath expr="//sheet/div[4]" position="replace"/>-->
+		<!--<xpath expr="//field[@name='department_id']" position="before">-->
+		<xpath expr="//group[@name='employee_data']" position="after">
 	         <group col='6' colspan='2'>
                    <field name="start_date"/>
                     <field name="time_to_expire"/>
@@ -17,17 +24,38 @@
                     <newline/>
                  </group>
                  <group col='6' colspan='2'>
+		    <div>
+		     <h5><u> <div align="center" attrs="{'invisible':[('step_technologies','=',False)]}">Step Technologies</div></u> </h5>
+		     <!--<h5><u> <label for="step_technologies" attrs="{'invisible':[('step_technologies','=',False)]}"/></u> </h5>-->
                      <field name="step_technologies" nolabel="1" placeholder="Step Technologies"/>
+		    </div>
+		    <div>
+		     <h5><u><div align="center" attrs="{'invisible':[('duties','=',False)]}">Duties</div></u></h5>
+		     <!--<h5><u><label for="duties" attrs="{'invisible':[('duties','=',False)]}"/></u></h5>-->
                      <field name="duties" nolabel="1" placeholder="Duties"/>
+		    </div>
+		    <div>
+		     <h5><u><div align="center" attrs="{'invisible':[('requirement','=',False)]}">Requirement</div></u></h5>
+		     <!--<h5><u><label for="requirement" attrs="{'invisible':[('requirement','=',False)]}"/></u></h5>-->
                      <field name="requirement" nolabel="1" placeholder="Requirement"/>
-                     <!--<field name="application_ids" colspan='2'>-->
-                            <!--<tree>-->
-                                 <!--<field name='partner_id'/>-->
-                            <!--</tree>-->
-                      <!--</field>-->
+		    </div>
                  </group>
-                    <newline/>
+                 <group col='4' colspan='2'>
+		    <div>
+		     <!--<h5> <u><label for="description" attrs="{'invisible':[('description','=',False)]}"/></u></h5>-->
+		     <h5> <u><div align="center" attrs="{'invisible':[('description','=',False)]}">Job Description</div></u></h5>
+                     <field name="description" nolabel="1" placeholder="Job Description"/>
+		    </div>
+		    <div>
+		      <!--<h5> <u><label for="requirements" attrs="{'invisible':[('requirements','=',False)]}"/> </u></h5>-->
+		      <h5> <u><div align="center" attrs="{'invisible':[('requirements','=',False)]}">Project Description</div> </u></h5>
+                     <field name="requirements" nolabel="1" placeholder="Project Description"/>
+                     </div>
+		 </group>
 	        </xpath>
+	        <!--<field name="requirements" position="attributes">-->
+		    <!--<attribute name='string'>Project Requirements</attribute>-->
+	        <!--</field>-->
             </field>
         </record>
     </data>
