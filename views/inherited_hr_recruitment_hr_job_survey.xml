@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_hr_recruitment_hr_job_survey">
+            <field name="name">hr.ext.qa.inherits.hr.recruitment.hr.job.survey</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_job_survey"/>
+            <field name="arch" type="xml">
+                
+            </field>
+        </record>
+    </data>
+</openerp>

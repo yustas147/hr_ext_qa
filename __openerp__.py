@@ -20,7 +20,7 @@
     'version': '0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr_recruitment','crm_lead_website_social'],
+    'depends': ['base','hr_recruitment','crm_lead_website_social', 'web_ckeditor4'],
 
     # always loaded
     'data': [

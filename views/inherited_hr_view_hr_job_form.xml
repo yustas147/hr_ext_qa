@@ -23,33 +23,29 @@
                     <field name="remote_allowed"/>
                     <newline/>
                  </group>
-                 <group col='6' colspan='2'>
+                 <group col='6' colspan='3'>
 		    <div>
-		     <h5><u> <div align="center" attrs="{'invisible':[('step_technologies','=',False)]}">Step Technologies</div></u> </h5>
-		     <!--<h5><u> <label for="step_technologies" attrs="{'invisible':[('step_technologies','=',False)]}"/></u> </h5>-->
-                     <field name="step_technologies" nolabel="1" placeholder="Step Technologies"/>
+		     <h5><u> <div align="center" attrs="{'invisible':[('step_technologies','=',False)]}">Stack Technologies</div></u> </h5>
+                     <field name="step_technologies" nolabel="1" placeholder="Step Technologies" />
 		    </div>
+		    <!--<div>-->
+		     <!--<h5><u><div align="center" attrs="{'invisible':[('duties','=',False)]}">Duties</div></u></h5>-->
+                     <!--<field name="duties" nolabel="1" placeholder="Duties"/>-->
+		    <!--</div>-->
 		    <div>
-		     <h5><u><div align="center" attrs="{'invisible':[('duties','=',False)]}">Duties</div></u></h5>
-		     <!--<h5><u><label for="duties" attrs="{'invisible':[('duties','=',False)]}"/></u></h5>-->
-                     <field name="duties" nolabel="1" placeholder="Duties"/>
-		    </div>
-		    <div>
-		     <h5><u><div align="center" attrs="{'invisible':[('requirement','=',False)]}">Requirement</div></u></h5>
-		     <!--<h5><u><label for="requirement" attrs="{'invisible':[('requirement','=',False)]}"/></u></h5>-->
-                     <field name="requirement" nolabel="1" placeholder="Requirement"/>
-		    </div>
-                 </group>
-                 <group col='4' colspan='2'>
-		    <div>
-		     <!--<h5> <u><label for="description" attrs="{'invisible':[('description','=',False)]}"/></u></h5>-->
 		     <h5> <u><div align="center" attrs="{'invisible':[('description','=',False)]}">Job Description</div></u></h5>
                      <field name="description" nolabel="1" placeholder="Job Description"/>
 		    </div>
-		    <div>
+                 </group>
+                 <group col='4' colspan='4'>
+		    <div colspan="4">
+		     <h4><u><div align="center" attrs="{'invisible':[('requirement','=',False)]}">Requirement</div></u></h4>
+                     <field name="requirement" nolabel="1" placeholder="Requirement" widget="text_ckeditor4"/>
+		    </div>
+		    <div colspan="4">
 		      <!--<h5> <u><label for="requirements" attrs="{'invisible':[('requirements','=',False)]}"/> </u></h5>-->
-		      <h5> <u><div align="center" attrs="{'invisible':[('requirements','=',False)]}">Project Description</div> </u></h5>
-                     <field name="requirements" nolabel="1" placeholder="Project Description"/>
+		      <h4> <u><div align="center" attrs="{'invisible':[('requirements','=',False)]}">Project Description</div> </u></h4>
+                     <field name="requirements" nolabel="1" placeholder="Project Description" widget="text_ckeditor4"/>
                      </div>
 		 </group>
 	        </xpath>
