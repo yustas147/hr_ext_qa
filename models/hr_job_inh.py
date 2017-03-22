@@ -12,7 +12,6 @@ class hr_job(models.Model):
     
     #start_date = fields.Date(string="Start date", default=fields.Date.context_today(self))
     start_date = fields.Date(string="Start date", required=True, default=_set_sd)
-#    start_date = fields.Date(string="Start date", required=True, default="_set_start_date")
     time_to_expire = fields.Date(string="Time to expire")
     priority = fields.Selection(string="Priority", selection=[('normal','Normal'),('high','High'),('very_high','Very High')])    
     step_technologies = fields.Text(string="Stack Technologies", required="True" )
@@ -23,5 +22,3 @@ class hr_job(models.Model):
     remote_allowed = fields.Selection(string="Remote Allowed?", selection=[('allowed','Allowed'),('disallowed','Disallowed'),('partially_allowed','Partiallly Allowed')])    
     project_description = fields.Text(string="Project Description")    
     #application_ids = fields.Many2many(string="Applications", comodel_name="hr.applicant", relation="hr_job_applicant")    
-    
-    

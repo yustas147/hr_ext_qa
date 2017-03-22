@@ -21,5 +21,5 @@ class hr_applicant(models.Model):
     slack = fields.Char(string="Slack", related='partner_id.slack')
     website = fields.Char(string="Website", related='partner_id.website')
     linkedin = fields.Char(string="Linkedin", related='partner_id.linkedin')
-    
+    sale_manager = fields.Many2one(comodel_name='res.users', string='Sale Manager')
     

@@ -21,6 +21,7 @@
                     <!--<field name='current_salary' widget="monetary"/>-->
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="after">
+                    <field name='sale_manager'/>
                     <field name='type_id'/>
                     <field name='candidate_level'/>
                     <field name='candidate_type'/>
