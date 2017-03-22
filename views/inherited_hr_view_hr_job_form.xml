@@ -15,7 +15,7 @@
 		<!--<xpath expr="//field[@name='department_id']" position="before">-->
 		<xpath expr="//group[@name='employee_data']" position="after">
 	         <group col='6' colspan='2'>
-                   <field name="start_date"/>
+                   <field name="start_date" attrs="{'required':True}"/>
                     <field name="time_to_expire"/>
                     <field name="priority"/>
                     <field name="phase_proj_prod"/>
@@ -26,15 +26,15 @@
                  <group col='6' colspan='3'>
 		    <div>
 		     <h5><u> <div align="center" attrs="{'invisible':[('step_technologies','=',False)]}">Stack Technologies</div></u> </h5>
-                     <field name="step_technologies" nolabel="1" placeholder="Step Technologies" />
+                     <field name="step_technologies" nolabel="1" placeholder="Stack Technologies" />
 		    </div>
 		    <!--<div>-->
 		     <!--<h5><u><div align="center" attrs="{'invisible':[('duties','=',False)]}">Duties</div></u></h5>-->
                      <!--<field name="duties" nolabel="1" placeholder="Duties"/>-->
 		    <!--</div>-->
 		    <div>
-		     <h5> <u><div align="center" attrs="{'invisible':[('description','=',False)]}">Job Description</div></u></h5>
-                     <field name="description" nolabel="1" placeholder="Job Description"/>
+		     <h5> <u><div align="center" attrs="{'invisible':[('description','=',False)]}">Job Description/Duties</div></u></h5>
+                     <field name="description" nolabel="1" placeholder="Job Description/Duties" attrs="{'required':True}"/>
 		    </div>
                  </group>
                  <group col='4' colspan='4'>
@@ -49,6 +49,9 @@
                      </div>
 		 </group>
 	        </xpath>
+	        <field name='no_of_recruitment' position='attributes'>
+		 <attribute name='required'>True</attribute>
+		</field>
 	        <!--<field name="requirements" position="attributes">-->
 		    <!--<attribute name='string'>Project Requirements</attribute>-->
 	        <!--</field>-->
