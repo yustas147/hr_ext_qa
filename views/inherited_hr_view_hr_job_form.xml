@@ -13,6 +13,9 @@
 		<!--<xpath expr="//sheet/div[3]" position="replace"/>-->
 		<!--<xpath expr="//sheet/div[4]" position="replace"/>-->
 		<!--<xpath expr="//field[@name='department_id']" position="before">-->
+		<xpath expr="//field[@name='department_id']" position='after'>
+		 <field name='salesperson_id'/>
+		</xpath>
 		<xpath expr="//group[@name='employee_data']" position="after">
 	         <group col='6' colspan='2'>
                    <field name="start_date" attrs="{'required':True}"/>
