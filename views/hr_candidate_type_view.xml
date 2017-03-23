@@ -18,6 +18,30 @@
                 <field name="name"/>
             </form>
         </field>
-    
+    </record> 
+    <record id="hr_candidate_type_act" model="ir.actions.act_window">
+        <field name="name">Candidate Types</field>
+        <field name="res_model">hr.candidate.type</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="hr_candidate_type_tree"/>
+        <!--<field name="help" type="html">-->
+          <!--<p class="oe_view_nocontent_create">-->
+            <!--Click to add a new stage in the recruitment process.-->
+          <!--</p><p>-->
+            <!--Don't forget to specify the department if your recruitment process-->
+            <!--is different according to the job position.-->
+          <!--</p>-->
+        <!--</field>-->
+    </record>
+    <menuitem
+        id="menu_hr_candidate_type_act"
+        name="Candidate Types"
+        parent="hr_recruitment.menu_hr_recruitment_recruitment"
+        action="hr_candidate_type_act"
+        sequence="100" 
+    />
+        <!--sequence="100" groups="base.group_no_one"/>-->
+
+
     </data>    
 </openerp>
