@@ -11,8 +11,8 @@ class hr_applicant(models.Model):
     
     candidate_level = fields.Selection(string="Candidate Level", selection=[('intern','Intern'),('junior','Junior'),('upper_junior','Upper Junior'),('pre_middle','Pre-Middle'),('middle','Middle'),('upper_middle','Upper Middle'),('senior','Senior')], required=True)
 #    candidate_level = fields.Selection(string="Candidate Level", selection=[('normal','Normal'),('high','High'),('very_high','Very High')])
-    #candidate_type = fields.Many2one(string="Candidate Type", comodel_name="hr.candidate.type")
-    candidate_type = fields.Selection(string="Candidate Type", selection=[('normal','Normal'),('high','High'),('very_high','Very High')], required=True)
+    candidate_type = fields.Many2one(string="Candidate Type", comodel_name="hr.candidate.type")
+    #candidate_type = fields.Selection(string="Candidate Type", selection=[('normal','Normal'),('high','High'),('very_high','Very High')], required=True)
     current_salary = fields.Float(string="Current Salary")
     current_salary_extra = fields.Char(string="Current Salary Extra")
     availability_date = fields.Date(string="Available From")

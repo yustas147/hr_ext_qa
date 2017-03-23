@@ -1,0 +1,23 @@
+<openerp>
+    <data>
+    
+    <record model="ir.ui.view" id="hr_candidate_type_tree">
+        <field name="name">hr.candidate.type.tree</field>
+        <field name="model">hr.candidate.type</field>
+        <field name="arch" type="xml">
+            <tree string="Candidate Types">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_candidate_type_form">
+        <field name="name">hr.candidate.type.form</field>
+        <field name="model">hr.candidate.type</field>
+        <field name="arch" type="xml">
+            <form string="Candidate Types">
+                <field name="name"/>
+            </form>
+        </field>
+    
+    </data>    
+</openerp>
