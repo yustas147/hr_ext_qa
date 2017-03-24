@@ -35,6 +35,7 @@
         'views/hr_candidate_type_view.xml',
         'data/hr.applicant_category.csv',
         'data/hr.candidate.type.csv',
+        'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
     'demo': [
