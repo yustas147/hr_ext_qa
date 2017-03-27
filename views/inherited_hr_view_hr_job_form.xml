@@ -36,8 +36,8 @@
                      <!--<field name="duties" nolabel="1" placeholder="Duties"/>-->
 		    <!--</div>-->
 		    <div>
-		     <h5> <u><div align="center" attrs="{'invisible':[('description','=',False)]}">Job Description/Duties</div></u></h5>
-                     <field name="description" nolabel="1" placeholder="Job Description/Duties" attrs="{'required':True}"/>
+		      <h5> <u><div align="center" attrs="{'invisible':[('requirements','=',False)]}">Project Description</div> </u></h5>
+                     <field name="requirements" nolabel="1" placeholder="Project Description" />
 		    </div>
                  </group>
                  <group col='4' colspan='4'>
@@ -47,8 +47,8 @@
 		    </div>
 		    <div colspan="4">
 		      <!--<h5> <u><label for="requirements" attrs="{'invisible':[('requirements','=',False)]}"/> </u></h5>-->
-		      <h4> <u><div align="center" attrs="{'invisible':[('requirements','=',False)]}">Project Description</div> </u></h4>
-                     <field name="requirements" nolabel="1" placeholder="Project Description" widget="text_ckeditor4"/>
+		     <h4> <u><div align="center" attrs="{'invisible':[('description','=',False)]}">Job Description/Duties</div></u></h4>
+                     <field name="description" nolabel="1" placeholder="Job Description/Duties" attrs="{'required':True}" widget="text_ckeditor4" />
                      </div>
 		 </group>
 	        </xpath>

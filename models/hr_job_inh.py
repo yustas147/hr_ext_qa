@@ -22,4 +22,6 @@ class hr_job(models.Model):
     remote_allowed = fields.Selection(string="Remote Allowed?", selection=[('allowed','Allowed'),('disallowed','Disallowed'),('partially_allowed','Partiallly Allowed')])    
     project_description = fields.Text(string="Project Description")    
     #application_ids = fields.Many2many(string="Applications", comodel_name="hr.applicant", relation="hr_job_applicant")        
-    salesperson_id = fields.Many2one(comodel_name='res.users', string="Sale Person")
+    salesperson_id = fields.Many2one(comodel_name='res.users', string="Sale Person")    
+    no_of_recruitment = fields.Selection(required=True, default=1, selection=[(1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7')])
+    #no_of_recruitment = fields.Integer(required=True, default=1)
