@@ -33,6 +33,7 @@
         'views/inherited_base_res_partner_kanban_view.xml',
         'views/inherited_view_crm_lead_website_social_form1.xml',
         'views/hr_candidate_type_view.xml',
+        'views/hr_skill_role.xml',
         'data/hr.applicant_category.csv',
         'data/hr.candidate.type.csv',
         'security/ir.model.access.csv',

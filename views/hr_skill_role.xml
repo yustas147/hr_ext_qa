@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_skill_role_tree">
+            <field name="name">hr.skill.role</field>
+            <field name="model">hr.skill.role</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="skill_ids"/>
+                </tree>
+            </field>
+        </record>        
+        <record model="ir.ui.view" id="hr_skill_role_form">
+            <field name="name">hr.skill.role.form</field>
+            <field name="model">hr.skill.role</field>
+            <field name="arch" type="xml">
+                <form string="Roles">
+                    <sheet>
+                     <group>
+                        <field name="name"/>
+                        <field name="skill_ids"/>
+                     </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>   
+        
+       <record id="hr_skill_role_act" model="ir.actions.act_window">
+            <field name="name">HR Roles</field>
+            <field name="res_model">hr.skill.role</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem
+            id="menu_hr_skill_role_act"
+            name="Hr Roles"
+            parent="hr_skill.menu_hr_skill_mgt"
+            action="hr_skill_role_act"
+            sequence="101" 
+        /> 
+        
+    </data>        
+</openerp>

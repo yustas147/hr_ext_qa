@@ -12,9 +12,12 @@
 	        <label for="requirements" position="replace"/>
 		<!--<xpath expr="//sheet/div[3]" position="replace"/>-->
 		<!--<xpath expr="//sheet/div[4]" position="replace"/>-->
-		<!--<xpath expr="//field[@name='department_id']" position="before">-->
+		<!--<xpath expr="//field[@name='address_id']" position="after">-->
+		 <!--<field name='role_ids'/>-->
+		<!--</xpath>-->
 		<xpath expr="//field[@name='department_id']" position='after'>
 		 <field name='salesperson_id'/>
+		 <field name='role_ids' widget='many2many_tags'/>
 		</xpath>
 		<xpath expr="//group[@name='employee_data']" position="after">
 	         <group col='6' colspan='2'>
@@ -40,7 +43,7 @@
                      <field name="requirements" nolabel="1" placeholder="Project Description" />
 		    </div>
                  </group>
-                 <group col='4' colspan='4'>
+                 <group col='4' colspan='4' name='requirements'>
 		    <div colspan="4">
 		     <h4><u><div align="center" attrs="{'invisible':[('requirement','=',False)]}">Requirement</div></u></h4>
                      <field name="requirement" nolabel="1" placeholder="Requirement" widget="text_ckeditor4"/>
