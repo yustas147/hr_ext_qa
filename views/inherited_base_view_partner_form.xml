@@ -14,6 +14,9 @@
                     <div t-if="record.skype.raw_value">Skype: <a t-attf-href="skype:#{record.skype.raw_value}"><field name="skype"/></a></div>
                     <div t-if="record.slack.raw_value">Slack: <a t-attf-href="slack:#{record.slack.raw_value}"><field name="slack"/></a></div>
                 </xpath>
+                <xpath expr="//notebook" position="before">
+                                 <field name="application_ids" widget='many2many_tags'/>
+                </xpath>
             </field>
         </record>
     </data>

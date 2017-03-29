@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_base_view_partner_tree">
+            <field name="name">hr.ext.qa.inherits.base.view.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="after">
+                                 <field name="application_ids"/>
+                                 <!--<field name="application_ids" widget='many2many_tags'/>-->
+                                    <!--<tree editable="bottom">-->
+                                        <!--<field name='name'/>-->
+                                    <!--</tree>-->
+                                 <!--</field>-->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

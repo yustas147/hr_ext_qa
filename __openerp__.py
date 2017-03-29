@@ -34,6 +34,8 @@
         'views/inherited_view_crm_lead_website_social_form1.xml',
         'views/hr_candidate_type_view.xml',
         'views/hr_skill_role.xml',
+        'views/partner_applicant_menu_action.xml',
+        'views/inh_base_view_partner_tree.xml',
         'data/hr.applicant_category.csv',
         'data/hr.candidate.type.csv',
         'security/ir.model.access.csv',

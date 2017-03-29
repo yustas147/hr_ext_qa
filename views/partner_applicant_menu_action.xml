@@ -1,0 +1,20 @@
+<openerp>
+    <data>
+        <record id="hr_partner_applicant_act" model="ir.actions.act_window">
+            <field name="name">Partner Applicants</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="domain">[('application_ids','!=',False)]</field>
+        </record>
+        <menuitem
+            id="menu_partner_applicant_act"
+            name="Partner Applicants"
+            parent="hr_recruitment.menu_hr_recruitment_recruitment"
+            action="hr_partner_applicant_act"
+            sequence="102" 
+        />
+        <!--sequence="100" groups="base.group_no_one"/>-->
+
+
+    </data>    
+</openerp>

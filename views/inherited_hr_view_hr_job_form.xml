@@ -10,13 +10,9 @@
 	        <field name="requirements" position="replace"/>
 	        <label for="description" position="replace"/>
 	        <label for="requirements" position="replace"/>
-		<!--<xpath expr="//sheet/div[3]" position="replace"/>-->
-		<!--<xpath expr="//sheet/div[4]" position="replace"/>-->
-		<!--<xpath expr="//field[@name='address_id']" position="after">-->
-		 <!--<field name='role_ids'/>-->
-		<!--</xpath>-->
 		<xpath expr="//field[@name='department_id']" position='after'>
 		 <field name='salesperson_id'/>
+		 <field name='for_who'/>
 		 <field name='role_ids' widget='many2many_tags'/>
 		</xpath>
 		<xpath expr="//group[@name='employee_data']" position="after">
