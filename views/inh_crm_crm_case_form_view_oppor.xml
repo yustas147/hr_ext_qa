@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <act_window
+            id="connected_jobs_act_2"
+            name="Show Connected Jobs 2"
+            res_model='hr.job'
+            domain="[('lead_id.id','=',active_id)]"
+        />
+    
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_crm_crm_case_form_view_oppor">
+            <field name="name">hr.ext.qa.inherits.crm.crm.case.form.view.oppor</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+             <xpath expr="//div[@class='oe_right oe_button_box']" position="inside">
+                    <button class="oe_stat_button" icon="fa-file-o" name="%(hr_ext_qa.connected_jobs_act_2)d" type="action">
+                        <field name="job_count" widget="statinfo" string="Jobs"/>
+                    </button>
+             </xpath>
+             <xpath expr="//field[@name='partner_id']" position='after'>
+                <field name='qa_project_id'/>
+             </xpath>
+            </field>
+        </record>        
+    </data>    
+</openerp>

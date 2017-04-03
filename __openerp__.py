@@ -20,7 +20,7 @@
     'version': '0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr_recruitment','crm_lead_website_social', 'web_ckeditor4', 'hr_skills_extended'],
+    'depends': ['base','crm','hr_recruitment','crm_lead_website_social', 'web_ckeditor4', 'hr_skills_extended','project_wbs'],
 
     # always loaded
     'data': [
@@ -36,6 +36,8 @@
         'views/hr_skill_role.xml',
         'views/partner_applicant_menu_action.xml',
         'views/inh_base_view_partner_tree.xml',
+        'views/inh_project_edit_project.xml',
+        'views/inh_crm_crm_case_form_view_oppor.xml',
         'data/hr.applicant_category.csv',
         'data/hr.candidate.type.csv',
         'security/ir.model.access.csv',
