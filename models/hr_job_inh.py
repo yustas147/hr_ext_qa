@@ -13,7 +13,7 @@ class hr_job(models.Model):
     #start_date = fields.Date(string="Start date", default=fields.Date.context_today(self))
     start_date = fields.Date(string="Start date", required=True, default=_set_sd)
     time_to_expire = fields.Date(string="Time to expire")
-    priority = fields.Selection(string="Priority", selection=[('normal','Normal'),('high','High'),('very_high','Very High')])    
+    priority = fields.Selection(string="Priority", selection=[('low','Low'),('normal','Normal'),('high','High'),('very_high','Very High')])    
     step_technologies = fields.Text(string="Stack Technologies", required="True" )
 #    duties = fields.Text(string="Duties", required="True")
     requirement = fields.Text(string="Requirement",  required="True")
@@ -29,4 +29,6 @@ class hr_job(models.Model):
     for_who = fields.Selection(string="For Us or Client", selection=[('us','For Us'),('client','For Client')])    
     
     project_id = fields.Many2one(string='Project', comodel_name='project.project')
-    lead_id = fields.Many2one(string='Opportunity', comodel_name='crm.lead')
+    lead_id = fields.Many2one(string='Opportunity', comodel_name='crm.lead')    
+    salary_from = fields.Integer(string='from')
+    salary_till = fields.Integer(string='till')
