@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_hr_view_job_filter">
+            <field name="name">hr.ext.qa.inherits.hr.view.job.filter</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_job_filter"/>
+            <field name="arch" type="xml">
+	     <xpath expr="//filter[@string='Company']" position='after'>
+	      <filter string="For Who" domain="[]" context="{'group_by':'for_who'}"/>
+	     </xpath>
+            </field>
+	</record>
         <record model="ir.ui.view" id="hr_ext_qa_inherits_hr_view_hr_job_form">
             <field name="name">hr.ext.qa.inherits.hr.view.hr.job.form</field>
             <field name="model">hr.job</field>
@@ -10,12 +20,6 @@
 		 <attribute name='col'>4</attribute>
 		 <attribute name='colspan'>2</attribute>
 		</xpath>
-		<!--<xpath expr="//group[@name='employee_data']" position='before'>-->
-		 <!--<group name='salary_from_till' col='4' colspan='2'>-->
-		  <!--<field name='salary_from'/>-->
-		  <!--<field name='salary_till'/>-->
-		 <!--</group>-->
-		<!--</xpath>-->
 	        <field name="description" position="replace"/>
 	        <field name="requirements" position="replace"/>
 	        <label for="description" position="replace"/>
@@ -72,16 +76,8 @@
 	        <field name='no_of_recruitment' position='attributes'>
 		 <attribute name='required'>True</attribute>
 		</field>
-	        <!--<field name="requirements" position="attributes">-->
-		    <!--<attribute name='string'>Project Requirements</attribute>-->
-	        <!--</field>-->
             </field>
         </record>
-        <!--<record model="ir.ui.view" id="hr_ext_qa_inherits_hr_view_hr_job_form">-->
-            <!--<field name="name">hr.ext.qa.inherits.hr.view.hr.job.form</field>-->
-            <!--<field name="model">hr.job</field>-->
-            <!--<field name="inherit_id" ref="hr.view_hr_job_form"/>-->
-            <!--<field name="arch" type="xml">-->
         
     </data>
 </openerp>

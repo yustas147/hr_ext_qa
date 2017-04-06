@@ -1,0 +1,20 @@
+<openerp>
+    <data>
+        <record id="hr_job_candidates_act" model="ir.actions.act_window">
+            <field name="name">Candidates</field>
+            <field name="res_model">hr.job</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('for_who','=','client')]</field>
+        </record>
+        <menuitem
+            id="menu_job_candidates_act"
+            name="Candidates"
+            parent="base.menu_crm_case_job_req_main"
+            action="hr_job_candidates_act"
+            sequence="109" 
+        />
+        <!--sequence="100" groups="base.group_no_one"/>-->
+
+
+    </data>    
+</openerp>

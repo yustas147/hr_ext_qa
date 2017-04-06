@@ -6,6 +6,7 @@
             <field name="model">hr.applicant</field>
             <field name="inherit_id" ref="hr_recruitment.crm_case_form_view_job"/>
             <field name="arch" type="xml">
+                <field name='availability' position='replace'/>
                 <field name='type_id' position='replace'/>
                 <field name='partner_mobile' position='attributes'>
                     <attribute name='string'>Cell Phone</attribute>

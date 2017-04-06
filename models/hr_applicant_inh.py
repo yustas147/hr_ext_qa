@@ -5,6 +5,16 @@ import logging
 
 _logger = logging.getLogger(name='YUSTAS')
 
+AVAILABLE_PRIORITIES = [
+    ('0', 'Bad'),
+    ('1', 'Below Average'),
+    ('2', 'Average'),
+    ('3', 'Good'),
+    ('4', 'Excellent'),
+    ('5', 'Fantastic')
+]
+
+
 class hr_applicant(models.Model):
     _name = 'hr.applicant'    
     _inherit = 'hr.applicant'    
@@ -21,5 +31,6 @@ class hr_applicant(models.Model):
     slack = fields.Char(string="Slack", related='partner_id.slack')
     website = fields.Char(string="Website", related='partner_id.website')
     linkedin = fields.Char(string="Linkedin", related='partner_id.linkedin')
+    priority = fields.Selection(selection=AVAILABLE_PRIORITIES, string='Appreciation')
     #sale_manager = fields.Many2one(comodel_name='res.users', string='Sale Manager')
     
