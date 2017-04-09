@@ -14,5 +14,6 @@ class project_project(models.Model):
     
     @api.multi    
     def _get_job_count(self):
-        self.job_count = len(self.job_ids)        
+        self.job_count = len(self.job_ids.mapped('id'))        
+        _logger.info('job count is %s', unicode(self.job_count))
         return self.job_count
