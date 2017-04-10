@@ -12,8 +12,8 @@ class project_project(models.Model):
     job_ids = fields.One2many(string='Jobs', comodel_name='hr.job', inverse_name='project_id')
     job_count = fields.Integer(string='Job Count', compute='_get_job_count')    
     
-    @api.multi    
+    @api.one    
     def _get_job_count(self):
         self.job_count = len(self.job_ids.mapped('id'))        
-        _logger.info('job count is %s', unicode(self.job_count))
+#        _logger.info('job count is %s', unicode(self.job_count))
         return self.job_count
