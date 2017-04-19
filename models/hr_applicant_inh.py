@@ -32,5 +32,8 @@ class hr_applicant(models.Model):
     website = fields.Char(string="Website", related='partner_id.website')
     linkedin = fields.Char(string="Linkedin", related='partner_id.linkedin')
     priority = fields.Selection(selection=AVAILABLE_PRIORITIES, string='Appreciation')
+    remote_work = fields.Boolean(string="Remote Work")
+    part_time = fields.Boolean(string="Part Time")
+    is_relocatable = fields.Boolean(string="Is Relocatable")
     #sale_manager = fields.Many2one(comodel_name='res.users', string='Sale Manager')
     

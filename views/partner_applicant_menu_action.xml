@@ -9,7 +9,7 @@
         <menuitem
             id="menu_partner_applicant_act"
             name="Partner Applicants"
-            parent="hr_recruitment.menu_hr_recruitment_recruitment"
+            parent="base.menu_crm_case_job_req_main"
             action="hr_partner_applicant_act"
             sequence="102" 
         />
@@ -18,3 +18,4 @@
 
     </data>    
 </openerp>
+            <!--parent="hr_recruitment.menu_hr_recruitment_recruitment"-->
