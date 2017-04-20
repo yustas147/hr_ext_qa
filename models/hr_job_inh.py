@@ -27,7 +27,7 @@ class hr_job(models.Model):
     #no_of_recruitment = fields.Selection(required=True, default=1, selection=[(1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7')])
     #no_of_recruitment = fields.Integer(required=True, default=1)    
     role_ids = fields.Many2many(string='Work Roles',comodel_name='hr.skill.role',relation='hr_jobs_roles_related')    
-    for_who = fields.Selection(string="For Us or Client", selection=[('us','For Us'),('client','For Client')])    
+    for_who = fields.Selection(string="Target", selection=[('Internal','Internal'),('External','External')])    
     
     project_id = fields.Many2one(string='Project', comodel_name='project.project')
     lead_id = fields.Many2one(string='Opportunity', comodel_name='crm.lead')    

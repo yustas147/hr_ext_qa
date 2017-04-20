@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="hr.view_job_filter"/>
             <field name="arch" type="xml">
 	     <xpath expr="//filter[@string='Company']" position='after'>
-	      <filter string="For Who" domain="[]" context="{'group_by':'for_who'}"/>
+	      <filter string="Target" domain="[]" context="{'group_by':'for_who'}"/>
 	     </xpath>
             </field>
 	</record>

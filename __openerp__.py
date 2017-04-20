@@ -39,7 +39,6 @@
         'views/inh_base_view_partner_tree.xml',
         'views/inh_project_edit_project.xml',
         'views/inh_crm_crm_case_form_view_oppor.xml',
-        'views/Candidate_menu_action.xml',
         'data/hr.applicant_category.csv',
         'data/hr.candidate.type.csv',
         'security/ir.model.access.csv',
@@ -49,3 +48,5 @@
      #   'demo.xml',
     ],
 }
+# removed 
+#        'views/Candidate_menu_action.xml',
