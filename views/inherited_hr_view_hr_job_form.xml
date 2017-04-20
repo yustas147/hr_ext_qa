@@ -9,6 +9,10 @@
 	     <xpath expr="//filter[@string='Company']" position='after'>
 	      <filter string="Target" domain="[]" context="{'group_by':'for_who'}"/>
 	     </xpath>
+	     <xpath expr="//filter[@name='in_recruitment']" position='after'>
+	      <filter string="Internal" domain="[('for_who','=','Internal')]" />
+	      <filter string="External" domain="[('for_who','=','External')]" />
+	     </xpath>
             </field>
 	</record>
         <record model="ir.ui.view" id="hr_ext_qa_inherits_hr_view_hr_job_form">
