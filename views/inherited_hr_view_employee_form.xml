@@ -6,6 +6,24 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
+                <xpath expr="//notebook" position="before">
+                    <group name='some_qa_info' col='6' colspan='2'>
+                        <field name='last_name_ru'/>
+                        <field name='first_name_ru'/>
+                        <field name='middle_name_ru'/>
+                    </group>
+                    <group name='nick_icq' col='4' colspan='2'>
+                        <field name='nickname'/>
+                        <field name='icq'/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="after">
+                        <field name='degree'/>
+                        <field name='candidate_level'/>
+                        <field name='is_relocatable'/>
+                        <field name='part_time'/>
+                        <field name='remote_work'/>
+                </xpath>
                 <xpath expr="//field[@name='address_home_id']" position="after">
                     <field name='mobile'/>
                     <field name='private_email' widget='email'/>
