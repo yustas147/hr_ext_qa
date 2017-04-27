@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hr_ext_qa_Group_hr_manager_Hr_candidatae_type_Id,hr_ext_qa.group_hr_manager.hr_candidatae_type,hr_ext_qa.model_hr_candidate_type,base.group_hr_manager,1,1,1,1
 access_hr_ext_qa_All_Hr_candidatae_type_Id,hr_ext_qa.All.hr_candidatae_type,hr_ext_qa.model_hr_candidate_type,,1,0,0,0
+access_hr_ext_qa_Hr_employee_Hr_job_Id,hr_ext_qa.Hr_employee.hr_job,hr_ext_qa.model_hr_job,base.group_user,1,0,0,0
+access_hr_ext_qa_Hr_employee_Hr_applicant_Id,hr_ext_qa.Hr_employee.hr_applicant,hr_ext_qa.model_hr_applicant,base.group_user,1,0,0,0
