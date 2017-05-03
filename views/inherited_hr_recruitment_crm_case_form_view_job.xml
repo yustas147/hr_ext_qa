@@ -25,6 +25,10 @@
                     <field name='remote_work'/> 
                     <!--<field name='current_salary' widget="monetary"/>-->
                 </xpath>
+                <xpath expr="//field[@name='description']" position="after">
+                    <separator string="Skill Data"/>
+                    <field name='skill_data_ids'/> 
+                </xpath>
                 <xpath expr="//field[@name='user_id']" position="after">
 
                     <!--<field name='sale_manager'/>-->
