@@ -53,6 +53,7 @@ class hr_applicant(models.Model):
             if applicant.job_id and (applicant.partner_name or contact_name):
                 applicant.job_id.write({'no_of_hired_employee': applicant.job_id.no_of_hired_employee + 1})
                 create_ctx = dict(context, mail_broadcast=True)
+                a_sk_tuples = [ (4, rec.id) for rec in applicant.skill_data_ids ]
                 emp_id = hr_employee.create(cr, uid, {'name': applicant.partner_name or contact_name,
                                                      'job_id': applicant.job_id.id,
                                                      'address_home_id': address_id,
@@ -66,6 +67,7 @@ class hr_applicant(models.Model):
                                                      'remote_work': applicant.remote_work,
                                                      
                                                      }, context=create_ctx)
+                hr_employee.write(cr, uid, [emp_id], {'hr_employee_skill_data_ids': a_sk_tuples})
                 self.write(cr, uid, [applicant.id], {'emp_id': emp_id}, context=context)
                 self.pool['hr.job'].message_post(
                     cr, uid, [applicant.job_id.id],
@@ -95,10 +97,22 @@ class hr_applicant(models.Model):
     slack = fields.Char(string="Slack", related='partner_id.slack')
     website = fields.Char(string="Website", related='partner_id.website')
     linkedin = fields.Char(string="Linkedin", related='partner_id.linkedin')
+    facebook = fields.Char(string="Facebook", related='partner_id.facebook')
     priority = fields.Selection(selection=AVAILABLE_PRIORITIES, string='Appreciation')
     remote_work = fields.Boolean(string="Remote Work")
     part_time = fields.Boolean(string="Part Time")
     is_relocatable = fields.Boolean(string="Is Relocatable")
-    skill_data_ids = fields.One2many(string='Skill Data', comodel_name='hr.employee.skill.data', related='emp_id.hr_employee_skill_data_ids')
+    skill_data_ids = fields.One2many(string='Skill Data', comodel_name='hr.employee.skill.data', inverse_name='applicant_id')
+#    skill_data_ids = fields.One2many(string='Skill Data', comodel_name='hr.employee.skill.data', related='emp_id.hr_employee_skill_data_ids')
+    role_ids = fields.Many2many(string='Skill Data', comodel_name='hr.skill.role', related='job_id.role_ids')
     #sale_manager = fields.Many2one(comodel_name='res.users', string='Sale Manager')
+    skill_ids = fields.Many2many(
+        'hr.skill',
+        'skill_applicant_rel',
+        'applicant_id',
+        'skill_id',
+        'Skills',
+        domain="[('child_ids', '=', False)]",
+    )
+    
     

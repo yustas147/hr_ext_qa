@@ -20,14 +20,25 @@
                     <field name='slack'/> 
                     <field name='website'/> 
                     <field name='linkedin'/> 
+                    <field name='facebook'/> 
                     <field name='part_time'/> 
                     <field name='is_relocatable'/> 
                     <field name='remote_work'/> 
                     <!--<field name='current_salary' widget="monetary"/>-->
                 </xpath>
                 <xpath expr="//field[@name='description']" position="after">
-                    <separator string="Skill Data"/>
-                    <field name='skill_data_ids'/> 
+                    <notebook>
+                        <page string="Role and Skill Data">
+                            <field name='role_ids'/> 
+                            <field name='skill_data_ids'> 
+                                <tree editable="bottom" default_order="percentage desc">
+                                    <field name="skill_id"/>
+                                    <field name="percentage"/>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="after">
 
