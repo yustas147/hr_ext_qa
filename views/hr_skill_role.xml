@@ -34,7 +34,7 @@
         </record>
         <menuitem
             id="menu_hr_skill_role_act"
-            name="Hr Roles"
+            name="Work Roles"
             parent="hr_skill.menu_hr_skill_mgt"
             action="hr_skill_role_act"
             sequence="101" 

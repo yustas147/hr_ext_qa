@@ -26,3 +26,4 @@ class hr_employee(models.Model):
     is_relocatable = fields.Boolean(string="Is Relocatable")        
     remote_work = fields.Boolean(string="Remote Work")
     #hr_employee_skill_data_ids
+    role_ids = fields.Many2many(string='Skill Data', comodel_name='hr.skill.role', related='job_id.role_ids')

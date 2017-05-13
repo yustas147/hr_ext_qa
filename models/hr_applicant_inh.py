@@ -3,6 +3,7 @@
 from openerp import models, fields, api
 import logging
 from openerp.osv import osv
+from openerp.tools.translate import _
 
 _logger = logging.getLogger(name='YUSTAS')
 
