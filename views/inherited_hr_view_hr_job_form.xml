@@ -31,7 +31,7 @@
 		<xpath expr="//field[@name='department_id']" position='after'>
 		 <field name='salesperson_id'/>
 		 <field name='for_who'/>
-		 <field name='role_ids' widget='many2many_tags'/>
+		 <!--<field name='role_ids' widget='many2many_tags'/>-->
 		 <field name='project_id'/>
 		 <field name='lead_id'/>
 		</xpath>
@@ -74,6 +74,14 @@
 		      <!--<h5> <u><label for="requirements" attrs="{'invisible':[('requirements','=',False)]}"/> </u></h5>-->
 		     <h4> <u><div align="center" attrs="{'invisible':[('description','=',False)]}">Job Description/Duties</div></u></h4>
                      <field name="description" nolabel="1" placeholder="Job Description/Duties" attrs="{'required':True}" widget="text_ckeditor4" />
+                     </div>
+		    <div colspan="4">
+		     <h4> <u><div align="center" >Roles</div></u></h4>
+                         <field name='role_ids' nolabel='1'/>
+                     </div>
+		    <div colspan="4">
+		     <h4> <u><div align="center" >Skills</div></u></h4>
+                         <field name='skill_ids' nolabel='1'/>
                      </div>
 		 </group>
 	        </xpath>

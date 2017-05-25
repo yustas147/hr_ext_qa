@@ -33,3 +33,5 @@ class hr_job(models.Model):
     lead_id = fields.Many2one(string='Opportunity', comodel_name='crm.lead')    
     salary_from = fields.Integer(string='from')
     salary_till = fields.Integer(string='till')
+    
+    skill_ids = fields.Many2many(string="Skills", comodel_name='hr.skill', relation='hr_jobs_skills')
