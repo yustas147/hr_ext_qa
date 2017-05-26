@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_job_skill_data_tree">
+            <field name="name">hr.job.skill.data.tree</field>
+            <field name="model">hr.job.skill.data</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                        <field name="job_id"/>
+                        <field name="skill_id"/>
+                        <field name="percentage"/>
+                        <field name="description"/>
+                </tree>
+            </field>
+        </record>        
+        <record model="ir.ui.view" id="hr_employee_skill_data_form_1">
+            <field name="name">hr.job.skill.data.form</field>
+            <field name="model">hr.job.skill.data</field>
+            <field name="arch" type="xml">
+                <form string="Job Skill Data">
+                    <sheet>
+                     <group>
+                        <field name="job_id"/>
+                        <field name="skill_id"/>
+                        <field name="percentage"/>
+                        <field name="description"/>
+                     </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>          
+    </data>    
+</openerp>

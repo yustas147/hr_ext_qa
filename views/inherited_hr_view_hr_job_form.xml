@@ -83,6 +83,16 @@
 		     <h4> <u><div align="center" >Skills</div></u></h4>
                          <field name='skill_ids' nolabel='1'/>
                      </div>
+		    <div colspan="4">
+		     <h4> <u><div align="center" >Job Skill Demands Data</div></u></h4>
+                         <field name='skill_data_ids' nolabel='1'>
+			  <tree editable='bottom'>
+			   <field name='skill_id'/>
+			   <field name='percentage'/>
+			   <field name='description'/>
+			  </tree>
+			 </field>
+                     </div>
 		 </group>
 	        </xpath>
 	        <field name='no_of_recruitment' position='attributes'>
