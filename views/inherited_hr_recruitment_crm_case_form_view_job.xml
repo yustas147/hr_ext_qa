@@ -29,7 +29,12 @@
                 <xpath expr="//field[@name='description']" position="after">
                     <notebook>
                         <page string="Role and Skill Data">
-                            <field name='role_ids'/> 
+                            <field name='role_ids'> 
+                                <tree>
+                                    <field name='name'/>
+                                    <field name='skill_ids' widget='many2many_tabs'/>
+                                </tree>
+                            </field>
                             <field name='skill_data_ids'> 
                                 <tree editable="bottom" default_order="percentage desc">
                                     <field name="skill_id"/>
