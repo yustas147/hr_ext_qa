@@ -34,4 +34,17 @@ class hr_job(models.Model):
     salary_from = fields.Integer(string='from')
     salary_till = fields.Integer(string='till')
     
-    skill_ids = fields.Many2many(string="Skills", comodel_name='hr.skill', relation='hr_jobs_skills')
+    skill_ids = fields.Many2many(string="Skills", comodel_name='hr.skill', relation='hr_jobs_skills')    
+    skill_data_ids = fields.One2many(string="Skills", comodel_name='hr.job.skill.data', inverse_name='job_id')    
+    
+class hr_job_skill_data(models.Model):
+    _name = 'hr.job.skill.data'    
+    
+    #name = fields.Char('Name')
+    percentage = fields.Integer(string='Grade of owning')
+    description = fields.Text(string='Full skill demands description')    
+    #employee_id = fields.Many2one(comodel_name='hr.employee', string=None)
+    job_id = fields.Many2one(comodel_name='hr.job', string=None)
+    skill_id = fields.Many2one(comodel_name='hr.skill', string='Skill Data')
+#    skill_id = fields.Many2one(comodel_name='hr.skill', string=None, ondelete='cascade')
+    
