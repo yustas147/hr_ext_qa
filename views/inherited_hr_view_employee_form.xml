@@ -34,5 +34,20 @@
                 </xpath>
             </field>
         </record>
+
+        <record model="ir.ui.view" id="hr_ext_qa_inherits_hr_hr_employee_view_form2">
+            <field name="name">hr.ext.qa.inherits.hr_contract.hr_hr_employee_view_form2</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@string='Contract']" position="inside">                      
+                    <label for="trial_date_start" string="Probation Period"/>
+                        <div>
+                            <field name="trial_date_start" class="oe_inline"/> - <field name="trial_date_end" class="oe_inline"/>
+                        </div>
+                </xpath>
+            </field>
+        </record>
+        
     </data>
 </openerp>
