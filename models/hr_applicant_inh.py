@@ -115,5 +115,4 @@ class hr_applicant(models.Model):
         'Skills',
         domain="[('child_ids', '=', False)]",
     )
-    
-    
+    categ_ids = fields.Many2many('hr.employee.category', string='Tags')
