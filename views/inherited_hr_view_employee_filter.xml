@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_ext_qa_view_employee_search">
+            <field name="name">hr_ext_qa.search</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@string='Company']" position="after">
+                    <filter string="Working Address" icon="terp-go-home" domain="[]" context="{'group_by':'address_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

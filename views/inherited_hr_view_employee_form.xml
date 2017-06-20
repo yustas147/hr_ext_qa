@@ -26,11 +26,24 @@
                 </xpath>
                 <xpath expr="//field[@name='address_home_id']" position="after">
                     <field name='mobile'/>
+                    <field name="phone"/>
                     <field name='private_email' widget='email'/>
                     <field name='corporate_email'/>
                     <field name='city'/>
                     <field name='education'/>
                     <field name='passport_data'/>
+                </xpath>
+                <!-- Changing positions of fields and attributes-->
+                <label for="work_email" class="oe_edit_only" position="replace"></label>
+                <field name="work_email" widget="email" position="replace"></field>
+                <label for="work_phone" class="oe_edit_only" position="replace"></label>
+                <field name="work_phone" position="replace"></field>
+                <xpath expr="//group[@string='Contact Information']" position="inside">
+                    <field name="work_email" widget="email"/>
+                    <field name="work_phone"/>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="groups">base.group_multi_company</attribute>
                 </xpath>
             </field>
         </record>
