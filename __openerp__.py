@@ -17,7 +17,7 @@
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
     'category': 'hr',
-    'version': '0.2',
+    'version': '0.3',
 
     # any module necessary for this one to work correctly
     'depends': ['base','crm','hr_recruitment','crm_lead_website_social', 'web_ckeditor4', 'hr_skills_extended','project_wbs'],
@@ -41,6 +41,7 @@
         'views/inh_crm_crm_case_form_view_oppor.xml',
         'views/inh_hr_skilL_view_employee_skill_form.xml',
         'views/hr_job_skill_data.xml',
+        'views/inherited_hr_view_employee_filter.xml',
         'data/hr.applicant_category.csv',
         'data/hr.candidate.type.csv',
         'security/ir.model.access.csv',

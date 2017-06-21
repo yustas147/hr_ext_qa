@@ -22,6 +22,9 @@ class hr_employee(models.Model):
             _logger.info('777777777777777777777777777777 %s', contract.trial_date_end)
             self.trial_date_end = contract.trial_date_end
 
+    def onchange_address_id(self, cr, uid, ids, address, context=None):
+        return {'value': {}}
+    
     mobile = fields.Char(string="Mobile", related='address_home_id.mobile')
     private_email = fields.Char(string="Private Email", related='address_home_id.email')
     education = fields.Text(string="Education")
@@ -46,3 +49,4 @@ class hr_employee(models.Model):
     
     trial_date_start = fields.Date('Trial Start Date', compute = _compute_trial_start)
     trial_date_end = fields.Date('Trial End Date', compute = _compute_trial_end)
+    phone = fields.Char(string="Phone", related = 'address_home_id.phone', store=True)

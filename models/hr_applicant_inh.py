@@ -82,7 +82,7 @@ class hr_applicant(models.Model):
         if emp_id:
             dict_act_window['res_id'] = emp_id
         dict_act_window['view_mode'] = 'form,tree'
-        return dict_act_window    
+        return dict_act_window
     
     name = fields.Char('Subject / Application Name', compute = '_get_applicant_name', required=False)
     
@@ -116,3 +116,4 @@ class hr_applicant(models.Model):
         domain="[('child_ids', '=', False)]",
     )
     categ_ids = fields.Many2many('hr.employee.category', string='Tags')
+    company_id = fields.Many2one('res.partner', 'Company', related='job_id.address_id', readonly=True, store=True)
